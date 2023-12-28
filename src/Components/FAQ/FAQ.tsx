@@ -4,7 +4,7 @@ import FaqBox from './faqbox/FaqBox';
 import Image from 'next/image';
 const FAQ = () => {
     return (
-        <div className={`${styles.faq} container`}>
+        <div className={`${styles.faq} container`} id='faq'>
             <div className={styles.box}></div>
             <div className={styles.imgsec}>
                 <Image src="/images/1.png" alt="help" width={1200} height={1200} />

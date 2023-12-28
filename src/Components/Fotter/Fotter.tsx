@@ -15,10 +15,10 @@ const Fotter = () => {
                     <p>We offer a wide range of Dental Health Services & Cosmetic Dental Treatment, maintaining the highest standard of hygiene & Sterilization. We are equipped with modern instruments & latest technology.</p>
                     <ul>
                         <li>
-                            <a href="#"><MdOutlineAlternateEmail />  <span>magadhorodentalpatna@gmail.com</span></a>
+                            <a href="mailto:magadhorodentalpatna@gmail.com"><MdOutlineAlternateEmail />  <span>magadhorodentalpatna@gmail.com</span></a>
                         </li>
                         <li>
-                            <a href="#"><MdOutlinePhone /> <span>+91 8292606814</span></a>
+                            <a href="tel:+91 8292606814"><MdOutlinePhone /> <span>+91 8292606814</span></a>
                         </li>
                     </ul>
 
@@ -26,11 +26,11 @@ const Fotter = () => {
                 <div className={styles.section2}>
                     <ul>
                         <li className={styles.title}>Our Links</li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Latest Blog</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Our Team</a></li>
+                        <li><a href="#blog">Latest Blog</a></li>
                     </ul>
                 </div>
                 <div className={styles.section3}>

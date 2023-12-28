@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './styles/blogbox.module.css'
 import Image from 'next/image';
+import { BlogPost } from '@/lib/models/blogposts';
 
-const Blogboxs = () => {
+const Blogboxs = ({ blog }: { blog: BlogPost }) => {
     return (
         <div className={styles.blogbox}>
-            <Image width={1200} height={1200} src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="blogimg" />
-            <h1>Cras accumsan nulla nec lacus ultricies placerat.</h1>
-            <p>Curabitur sagittis libero tincidunt tempor finibus. Mauris at dignissim ligula, nec tristique orci.
-            </p>
+            <Image width={1200} height={1200} src={blog.image} alt="blogimg" />
+            <h1>{blog.title}</h1>
+            <p>{blog.desc}</p>
         </div>
     );
 };

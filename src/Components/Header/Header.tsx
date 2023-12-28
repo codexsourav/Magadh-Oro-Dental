@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Header = () => {
     return (
         <>
-            <div className={`${styles.header} container`}>
+            <div className={`${styles.header} container`} id='home'>
                 <div className={styles.content}>
                     <p className={styles.subtitle}>welcome To Magadh Oro Dental - Implant & Orthodontic Clinic</p>
 

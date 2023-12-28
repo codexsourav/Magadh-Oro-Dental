@@ -18,19 +18,19 @@ const Navbar = () => {
 
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#header">Home</a>
                         </li>
                         <li>
-                            <a href="#">About US</a>
+                            <a href="#about">About US</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#services">Services</a>
                         </li>
                         <li>
-                            <a href="#">Pricing</a>
+                            <a href="#pricing">Pricing</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#contactus">Contact Us</a>
                         </li>
                     </ul>
                     <a href="#" className={styles.navbarBtn}>Book Now</a>

@@ -5,7 +5,7 @@ import styles from './styles/services.module.css'
 const Services = () => {
     return (
         <>
-            <div className={`${styles.services} container`}>
+            <div className={`${styles.services} container`} id='services'>
                 <h1 className="title">Our Services</h1>
                 <h1 className="subtitle">What We Provide</h1>
                 <div className={styles.servicesContent}>

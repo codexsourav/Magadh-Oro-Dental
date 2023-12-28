@@ -4,7 +4,7 @@ import PricingBox from './PricingBox/PricingBox';
 
 const Pricing = () => {
     return (
-        <div className={`${styles.pricing} container`}>
+        <div className={`${styles.pricing} container`} id='pricing'>
             <h1 className='title'>Pricing</h1>
             <h1 className='subtitle'>We offer Affordable Prices</h1>
             <div className={styles.ourPrices}>

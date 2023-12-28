@@ -21,21 +21,27 @@ export default async function RootLayout({
 }) {
   await connectDb();
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+    <>
+      <html lang="en">
 
-    </html>
+        <body className={inter.className}>
+          {children}
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
+
+        </body>
+      </html>
+
+    </>
   )
 }

@@ -13,10 +13,15 @@ import Watch from '@/Components/Watch/Watch';
 import Maps from '@/Components/maps/Maps';
 import React from 'react';
 import getYoutubeVideos from '@/helper/getYoutubeVideos';
+import { BlogPost, BlogPostModel } from '@/lib/models/blogposts';
 
 const Home = async () => {
   const id: string = "UCENvANETSckCOAonuFMGYiw"
   const getvideos = await getYoutubeVideos(id);
+  const recentPosts: BlogPost[] = await BlogPostModel
+    .find({})
+    .sort({ createdAt: -1 })
+    .limit(3);
 
   return (
     <>
@@ -28,7 +33,7 @@ const Home = async () => {
       <Pricing />
       <FAQ />
       <OurDoctors />
-      <OurBlogs />
+      {recentPosts.length == 0 ? null : <OurBlogs blogs={recentPosts} />}
       <Watch data={getvideos} ChannelId={id} />
       <ContactUs />
       <Maps />

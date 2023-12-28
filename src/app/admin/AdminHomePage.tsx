@@ -10,19 +10,19 @@ import BookingView from '@/adminComponent/BookingView';
 import MakeApiRequest from '@/helper/makeApiRequest';
 import UpdateBlog from '@/adminComponent/update/page';
 import { BlogPost } from '@/lib/models/blogposts';
-import { getStorage } from '@/helper/storage';
-import loading from '../loading';
+import Loading from '../loading';
 
 
 const AdminHomePage = () => {
     const [tabIndex, setTabIndex] = useState<number>(0);
     const [data, setData] = useState(null);
     const [updateBlog, setUpdateBlog] = useState<BlogPost | null>(null);
-    const authData = getStorage("authdental");
 
-    const checkAuth = () => {
-        if (typeof window !== 'undefined') {
-            const authData = getStorage("authdental");
+
+    const checkAuth = async () => {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            const storage = await import('@/helper/storage');
+            const authData = storage.getStorage("authdental");
             if (!authData || authData === "") {
                 window.location.replace('/admin/login');
             } else {
@@ -49,9 +49,6 @@ const AdminHomePage = () => {
     }, [tabIndex, updateBlog])
 
 
-    if (typeof window === "undefined" || !authData || authData == "") {
-        return loading();
-    }
 
     return (
         <>

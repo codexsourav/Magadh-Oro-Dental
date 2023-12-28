@@ -50,6 +50,7 @@ const AddNewBlog = () => {
 
     const handleSubmit = async () => {
 
+
         if (blogData.title.trim().length == 0 || blogData.description.trim().length == 0 || blogData.image.trim().length == 0 || blogData.content.trim().length == 0) {
             Toast.fire({
                 icon: "error",
@@ -69,14 +70,29 @@ const AddNewBlog = () => {
         try {
             const makeapi = new MakeApiRequest("/api/blog/", post, "POST");
             const resdata = await makeapi.send();
-            setLoading(false);
+
+
+
             if (resdata.success == true) {
+
+                setBlogData({
+                    title: '',
+                    description: '',
+                    image: '',
+                    content: '',
+                });
+
+                setBlogData({
+                    title: '',
+                    description: '',
+                    image: '',
+                    content: '',
+                });
 
                 Toast.fire({
                     icon: "success",
                     title: "Post Add in successfully"
                 });
-                setBlogData({ title: '', description: '', image: '', content: '' });
 
             } else {
                 Toast.fire({
@@ -84,6 +100,7 @@ const AddNewBlog = () => {
                     title: "Post Add Error!"
                 });
             }
+            setLoading(false);
         } catch (error) {
             setLoading(false);
 

@@ -5,7 +5,7 @@ import DoctorBox from './Doctorbox/DoctorBox';
 
 const OurDoctors = () => {
     return (
-        <div className={`${styles.ourdoctors} container`}>
+        <div className={`${styles.ourdoctors} container`} id='doctors'>
             <h1 className="title">Our Doctor</h1>
             <h1 className="subtitle">Best Expert Dentist in Patna</h1>
             <div className={styles.doctors}>

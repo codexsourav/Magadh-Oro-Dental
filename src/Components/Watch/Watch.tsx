@@ -6,7 +6,7 @@ interface watchData { data: Array<YouTubeVideo>, ChannelId: string }
 
 const Watch = ({ data, ChannelId }: watchData) => {
     return (
-        <div className={`${styles.watch} container`}>
+        <div className={`${styles.watch} container`} id='watch'>
             <h1 className='title'>WATCh</h1>
             <h1 className='subtitle'>Our Experts Work</h1>
             <div className={styles.watchBoxes}>

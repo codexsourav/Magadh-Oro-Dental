@@ -28,8 +28,7 @@ export async function GET(request: Request) {
 
         const recentPosts: BlogPost[] = await BlogPostModel
             .find({})
-            .sort({ createdAt: -1 })
-            .limit(3);
+            .sort({ createdAt: -1 });
         return NextResponse.json(recentPosts);
     } catch (error: any) {
         console.error('Error:', error);
