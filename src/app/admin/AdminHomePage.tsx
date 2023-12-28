@@ -13,6 +13,7 @@ import { BlogPost } from '@/lib/models/blogposts';
 import { getStorage } from '@/helper/storage';
 import loading from '../loading';
 
+
 const AdminHomePage = () => {
     const [tabIndex, setTabIndex] = useState<number>(0);
     const [data, setData] = useState(null);
@@ -20,10 +21,13 @@ const AdminHomePage = () => {
     const authData = getStorage("authdental");
 
     const checkAuth = () => {
-        if (!authData || authData == "") {
-            window.location.replace('/admin/login');
-        } else {
-            loadData();
+        if (typeof window !== 'undefined') {
+            const authData = getStorage("authdental");
+            if (!authData || authData === "") {
+                window.location.replace('/admin/login');
+            } else {
+                loadData();
+            }
         }
     };
 
@@ -39,9 +43,9 @@ const AdminHomePage = () => {
 
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            checkAuth();
-        }
+
+        checkAuth();
+
     }, [tabIndex, updateBlog])
 
 
