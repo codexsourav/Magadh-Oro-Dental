@@ -4,7 +4,7 @@ import { connectDb } from "@/lib/db/connectDb";
 
 export async function POST(request: Request) {
     try {
-
+        await connectDb();
         const postData: BlogPost = await request.json();
         const newPost = new BlogPostModel(postData);
         await newPost.save();
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
     try {
-
+        await connectDb();
         const recentPosts: BlogPost[] = await BlogPostModel
             .find({})
             .sort({ createdAt: -1 });

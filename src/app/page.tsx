@@ -14,8 +14,10 @@ import Maps from '@/Components/maps/Maps';
 import React from 'react';
 import getYoutubeVideos from '@/helper/getYoutubeVideos';
 import { BlogPost, BlogPostModel } from '@/lib/models/blogposts';
+import { connectDb } from '@/lib/db/connectDb';
 
 const Home = async () => {
+  await connectDb();
   const id: string = "UCENvANETSckCOAonuFMGYiw"
   const getvideos = await getYoutubeVideos(id);
   const recentPosts: BlogPost[] = await BlogPostModel

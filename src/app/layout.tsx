@@ -19,7 +19,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  await connectDb();
+
   return (
     <>
       <html lang="en">

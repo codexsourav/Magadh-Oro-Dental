@@ -1,3 +1,4 @@
+import { connectDb } from "@/lib/db/connectDb";
 import { Users, UsersModel } from "@/lib/models/users";
 import { NextResponse } from "next/server";
 
@@ -15,6 +16,7 @@ export interface loginFormResponseType {
 export async function POST(request: Request) {
 
     try {
+        await connectDb();
         const body: loginFormDataType = await request.json();
         const user: Users | null = await UsersModel.findOne(body, { pass: 0 });
         if (user) {
