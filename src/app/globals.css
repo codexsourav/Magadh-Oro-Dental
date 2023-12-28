@@ -30,6 +30,98 @@ html {
   overflow-y: hidden;
 }
 
+.title {
+  color: #426359;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #332E2C;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-loading {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-loading .loader {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  border-top: 2px solid black;
+  animation: spiner infinite 1s linear;
+}
+
+@keyframes spiner {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+
+/* Button.module.css */
+.mybtn {
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.danger {
+  border: 2px solid #c4213c;
+  background-color: #c4213c;
+}
+
+/* InputBox.module.css */
+.input-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.inputgroup {
+  margin-bottom: 15px;
+}
+
+.inputgroup label {
+  margin-bottom: 5px;
+  display: block;
+}
+
 @media only screen and (max-width: 1000px) {
 
   .container {

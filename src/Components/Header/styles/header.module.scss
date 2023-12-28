@@ -1,0 +1,112 @@
+$color_1: #582e21;
+$color_2: #332e2c;
+$color_3: #111111;
+$color_4: #fff;
+$color_5: #252323;
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100vh - 100px);
+    max-height: 700px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        .subtitle {
+            color: $color_1;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+        .title {
+            color: $color_2;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: none;
+        }
+        .desc {
+            color: $color_3;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 35px;
+            text-transform: capitalize;
+        }
+        .bookBtn {
+            border-radius: 50px;
+            background: linear-gradient(94deg, #2d3131 0%, #313131 100%);
+            width: 180px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: $color_4;
+            font-weight: bolder;
+        }
+        .callBtn {
+            color: $color_5;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 75px;
+            text-transform: uppercase;
+        }
+    }
+    .sideImage {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img {
+            width: auto;
+            height: calc(100vh - 200px);
+            max-height: 700px;
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .header {
+        .content {
+            width: 100%;
+            .title {
+                font-size: 60px;
+            }
+            .subtitle {
+                font-size: 18px;
+            }
+            .callBtn {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 850px) {
+    .header {
+        grid-template-columns: auto;
+        height: auto;
+        max-height: 100%;
+        .content {
+            .title {
+                font-size: 40px;
+            }
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+        .sideImage {
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+            }
+        }
+    }
+}

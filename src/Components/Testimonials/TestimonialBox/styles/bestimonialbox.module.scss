@@ -1,0 +1,28 @@
+.testimonialBox {
+    .userBox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        .imageWrapper {
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 100px;
+                object-fit: cover;
+            }
+        }
+        .info {
+            h4 {
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    p {
+        line-height: 30px;
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .clock {
+            width: 90px;
+            height: 90px;
+            border: 2px solid #8a736286;
+            border-radius: 50%;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .clock .min {
+            /* display: none; */
+            position: absolute;
+            width: 10px;
+            height: 60px;
+            top: -17px;
+            left: calc(100px / 2 - 12px);
+            border-radius: 10px;
+            rotate: 180deg;
+            transform-origin: 50% 100%;
+            background-color: #8a7362;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            animation: rotate-hour 2s linear infinite;
+            z-index: 11;
+        }
+
+        .clock .sec {
+            /* display: none; */
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 13px;
+            left: 38px;
+            border-radius: 10px;
+            transform-origin: 50% 100%;
+            z-index: 99;
+            background-color: #8a7362;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            rotate: 0deg;
+            animation: rotate-minute 7s linear infinite;
+        }
+
+        .clock .center {
+            /* display: none; */
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50px;
+            transform-origin: 50% 100%;
+            background-color: #8a7362;
+        }
+
+
+        @keyframes rotate-hour {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-minute {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="center"></div>
+        <div class="sec"></div>
+        <div class="min"></div>
+    </div>
+</body>
+
+</html>
