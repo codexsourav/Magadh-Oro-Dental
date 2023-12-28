@@ -6,6 +6,7 @@ import { mailTypes } from '@/helper/nodemailer';
 import MakeApiRequest from '@/helper/makeApiRequest';
 import { toast } from 'react-toastify';
 import { validateEmail } from '@/helper/emailValidate';
+import Image from 'next/image';
 
 
 function ContactUs() {
@@ -59,7 +60,7 @@ function ContactUs() {
             <h2 className="subtitle">Connect With Our Doctors</h2>
             <div className={styles.contactBox}>
                 <div className={styles.imgSec}>
-                    <img src="/images/5.png" alt='contact us' width={2000} height={2000} />
+                    <Image src="/images/5.png" alt='contact us' width={2000} height={2000} />
                 </div>
                 <div className={styles.form}>
                     <div className={styles.formsec}>

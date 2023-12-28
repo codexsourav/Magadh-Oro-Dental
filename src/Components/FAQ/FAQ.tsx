@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './styles/faq.module.css'
 import FaqBox from './faqbox/FaqBox';
+import Image from 'next/image';
 const FAQ = () => {
     return (
         <div className={`${styles.faq} container`}>
             <div className={styles.box}></div>
             <div className={styles.imgsec}>
-                <img src="/images/1.png" alt="help" />
+                <Image src="/images/1.png" alt="help" width={1200} height={1200} />
             </div>
             <div className={styles.faqsection}>
                 <h1 className='title'>FAQ</h1>

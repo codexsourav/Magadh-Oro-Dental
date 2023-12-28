@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './styles/about.module.css'
+import Image from 'next/image';
 
 const About = () => {
     return (
         <div className={`${styles.about} container`}>
             <div className={styles.imageSec}>
-                <img src='/images/4.png' />
+                <Image  width={1200} height={1200} alt="aboutImage" src='/images/4.png' />
             </div>
             <div className={styles.contentSec}>
                 <h1 className='title' >About Us</h1>

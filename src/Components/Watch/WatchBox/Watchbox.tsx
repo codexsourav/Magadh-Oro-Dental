@@ -5,6 +5,7 @@ import YouTube from 'react-youtube';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import { IoCloseOutline } from "react-icons/io5";
 import { IoPlayCircle } from "react-icons/io5";
+import Image from 'next/image';
 
 interface watchData {
     title: string,
@@ -28,7 +29,7 @@ const Watchbox = ({ desc, title, videoId, image }: watchData) => {
         <>
             <div className={styles.watchbox} onClick={() => setShowvideo(true)}>
                 <IoPlayCircle className={styles.playbtn} />
-                <img src={image} alt="blogimg" />
+                <Image width={1200} height={1200} src={image} alt="blogimg" />
 
                 <h1>{title}</h1>
                 <p>{desc}</p>

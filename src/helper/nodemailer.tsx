@@ -17,7 +17,7 @@ export interface mailTypes {
     email: string,
 }
 
-export default async (data: mailTypes) => {
+const mail = async (data: mailTypes) => {
     const info = await transporter.sendMail({
         from: data.email, // sender address
         to: "info@idealedesigns.com,aryamehtaa@gmail.com,codexsourav404@gmail.com", // list of receivers
@@ -43,3 +43,6 @@ export default async (data: mailTypes) => {
     });
     return info.response;
 }
+
+
+export default mail;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles/header.module.css'
+import Image from 'next/image';
 
 const Header = () => {
     return (
@@ -17,7 +18,7 @@ const Header = () => {
                     </p>
                 </div>
                 <div className={styles.sideImage}>
-                    <img src='/images/2.png' width="100%" />
+                    <Image src='/images/2.png' width={1200} height={1200} alt='headerlogo' />
                 </div>
 
             </div>

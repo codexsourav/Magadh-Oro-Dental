@@ -36,7 +36,7 @@ export interface YouTubeVideo {
 }
 
 
-export default async (channelId: String) => {
+const getYoutubeVideo = async (channelId: String) => {
 
     try {
         const response: AxiosResponse = await axios.get("https://www.googleapis.com/youtube/v3/search?key=AIzaSyAvaZ35RODNWWD8QZ3dHFMLRipwbpdvhyk&channelId=" + channelId + "&part=snippet,id&order=date&maxResults=3");
@@ -46,3 +46,5 @@ export default async (channelId: String) => {
     }
 
 }
+
+export default getYoutubeVideo;

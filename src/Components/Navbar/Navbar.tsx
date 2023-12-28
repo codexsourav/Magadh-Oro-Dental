@@ -11,10 +11,10 @@ const Navbar = () => {
     return (
         <>
             <div className={`${styles.navbar} container`}>
-                <img alt='logo' src="/images/logo.png" width={200} height={200} style={{ display: "none" }} />
+                <Image alt='logo' src="/images/logo.png" width={200} height={200} style={{ display: "none" }} />
 
                 <div className={`${styles.menu} ${showMenu ? styles.menuActive : null}`}>
-                    <img alt='logo' src="/images/logo.png" width={200} height={200} />
+                    <Image alt='logo' src="/images/logo.png" width={200} height={200} />
 
                     <ul>
                         <li>

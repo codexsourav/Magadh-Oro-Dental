@@ -23,6 +23,7 @@ const ShowContacts = ({ contacts }: { contacts: ContactData[] }) => {
                             mobile={e.phone}
                             message={e.message}
                             id={e._id}
+                            key={e._id}
                         />
                     })
                 }

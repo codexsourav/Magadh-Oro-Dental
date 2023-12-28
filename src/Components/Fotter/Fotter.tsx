@@ -3,6 +3,7 @@ import styles from './styles/fotter.module.css'
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 import { GoClock } from "react-icons/go";
+import Image from 'next/image';
 
 const Fotter = () => {
     return (
@@ -10,7 +11,7 @@ const Fotter = () => {
 
             <div className={`${styles.fotter} container`}>
                 <div className={styles.section1}>
-                    <img src="images/logo.png" alt="mylogo" />
+                    <Image src="/images/logo.png" alt="mylogo" width={1200} height={1200} />
                     <p>We offer a wide range of Dental Health Services & Cosmetic Dental Treatment, maintaining the highest standard of hygiene & Sterilization. We are equipped with modern instruments & latest technology.</p>
                     <ul>
                         <li>
