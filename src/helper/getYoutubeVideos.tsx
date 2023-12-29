@@ -42,7 +42,7 @@ const getYoutubeVideo = async (channelId: String) => {
         const response: AxiosResponse = await axios.get("https://www.googleapis.com/youtube/v3/search?key=AIzaSyAvaZ35RODNWWD8QZ3dHFMLRipwbpdvhyk&channelId=" + channelId + "&part=snippet,id&order=date&maxResults=3");
         return response.data.items;
     } catch (error) {
-        throw error;
+        return { error: true }
     }
 
 }

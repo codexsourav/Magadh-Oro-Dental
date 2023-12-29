@@ -36,7 +36,7 @@ const Home = async () => {
       <FAQ />
       <OurDoctors />
       {recentPosts.length == 0 ? null : <OurBlogs blogs={recentPosts} />}
-      <Watch data={getvideos} ChannelId={id} />
+      {getvideos.error ? null : <Watch data={getvideos} ChannelId={id} />}
       <ContactUs />
       <Maps />
       <Fotter />
