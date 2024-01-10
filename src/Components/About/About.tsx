@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div className={`${styles.about} container`} id='about'>
             <div className={styles.imageSec}>
-                <Image width={1200} height={1200} alt="aboutImage" src='/images/4.png' />
+                <Image width={1200} height={1200} alt="aboutImage" src='/images/about.jpeg' />
             </div>
             <div className={styles.contentSec}>
                 <h1 className='title' >About Us</h1>

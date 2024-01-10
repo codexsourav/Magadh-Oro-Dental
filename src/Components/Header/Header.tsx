@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Header = () => {
     return (
         <>
-            <div className={`${styles.header} container`} id='home'>
+            <div className={`${styles.header} container`} id='home' style={{ backgroundImage: 'linear-gradient(0deg, rgba(0,0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url("https://www.patnadental.com/images/gallery/4.jpg")' }}>
                 <div className={styles.content}>
                     <p className={styles.subtitle}>welcome To Magadh Oro Dental - Implant & Orthodontic Clinic</p>
 
@@ -18,7 +18,7 @@ const Header = () => {
                     </p>
                 </div>
                 <div className={styles.sideImage}>
-                    <Image src='/images/2.png' width={1200} height={1200} alt='headerlogo' />
+                    {/* <Image src='/images/2.png' width={1200} height={1200} alt='headerlogo' /> */}
                 </div>
 
             </div>

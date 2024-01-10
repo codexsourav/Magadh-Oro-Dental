@@ -6,15 +6,17 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 
 import Image from 'next/image';
+import NavTop from './Components/NavTop/NavTop';
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
     return (
         <>
+            <NavTop />
             <div className={`${styles.navbar} container`}>
-                <Image alt='logo' src="/images/logo.png" width={200} height={200} style={{ display: "none" }} />
+                <Image alt='logo' src="/images/logo.png" width={200} height={200} className={styles.menuimageHeader} style={{ display: "none" }} />
 
                 <div className={`${styles.menu} ${showMenu ? styles.menuActive : null}`}>
-                    <Image alt='logo' src="/images/logo.png" width={200} height={200} />
+                    <Image alt='logo' src="/images/logo.png" width={200} height={200} className={styles.navimage} />
 
                     <ul>
                         <li>

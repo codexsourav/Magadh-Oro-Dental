@@ -1,14 +1,17 @@
-$color_1: #582e21;
-$color_2: #332e2c;
-$color_3: #111111;
+$color_1: #ffffff;
+$color_2: #ffffff;
+$color_3: #ffffff;
 $color_4: #fff;
-$color_5: #252323;
+$color_5: #ffffff;
 
 .header {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 400px;
     height: calc(100vh - 100px);
     max-height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     .content {
         display: flex;
         flex-direction: column;
@@ -40,7 +43,7 @@ $color_5: #252323;
         }
         .bookBtn {
             border-radius: 50px;
-            background: linear-gradient(94deg, #2d3131 0%, #313131 100%);
+            background: #124d81;
             width: 180px;
             height: 55px;
             display: flex;
@@ -88,6 +91,7 @@ $color_5: #252323;
 }
 @media only screen and (max-width: 850px) {
     .header {
+        padding-top: 50px;
         grid-template-columns: auto;
         height: auto;
         max-height: 100%;
@@ -97,6 +101,14 @@ $color_5: #252323;
             }
             .subtitle {
                 font-size: 18px;
+            }
+            .desc {
+                line-height: 25px;
+            }
+            .callBtn {
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 20px;
             }
         }
         .sideImage {

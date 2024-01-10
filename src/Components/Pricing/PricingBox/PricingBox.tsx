@@ -12,13 +12,13 @@ const PricingBox = ({ price, services, title }: priceData) => {
     return (
         <div className={styles.pricingbox}>
             <div className={styles.info}>
-                <h1>{title}</h1>
-                <h2>₹ {price}</h2>
+                {/* <h1>{title}</h1> */}
+                <h2>{title}</h2>
                 <ul>
                     {
                         services?.map((e, i) => {
                             return <li key={"service-" + i}>
-                                <IoCheckmarkCircle />
+                                {/* <IoCheckmarkCircle /> */}
                                 <span>{e}</span>
                             </li>
                         })

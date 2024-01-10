@@ -9,6 +9,7 @@
     justify-content: space-between;
 
     .info {
+        padding-top: 20px;
         h1 {
             color: #332e2c;
             font-size: 15px;
@@ -19,8 +20,9 @@
             text-align: center;
         }
         h2 {
+            padding: 0px 20px;
             color: #000;
-            font-size: 30px;
+            font-size: 25px;
             font-style: normal;
             font-weight: 600;
             text-align: center;
@@ -28,7 +30,6 @@
         }
         ul {
             padding: 30px;
-            list-style: none;
             display: flex;
             flex-direction: column;
             gap: 10px;

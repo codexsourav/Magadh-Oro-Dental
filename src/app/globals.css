@@ -12,16 +12,12 @@
 }
 
 body {
-  background-color: #fff;
-
   width: 100vw;
-
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 .container {
   max-width: 1400px;
@@ -73,7 +69,6 @@ html {
     rotate: 360deg;
   }
 }
-
 
 /* Button.module.css */
 .mybtn {

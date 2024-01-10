@@ -10,14 +10,14 @@ const Services = () => {
                 <h1 className="subtitle">What We Provide</h1>
                 <div className={styles.servicesContent}>
                     <div className={styles.servicesBox}>
-                        <ServicesBox desc='We provide painless single sitting root canal treatment, re-treatment of failed RCT by endodontist .' image='' title='Root Canal Treatment' />
+                        <ServicesBox desc='We provide painless single sitting root canal treatment, re-treatment of failed RCT by endodontist .' image='https://www.ceoklahoma.com/wp-content/uploads/iStock-1145180402-920x614.jpg' title='Root Canal Treatment' />
                         <ServicesBox desc='It is a specialized in surgical procedures involving the mouth, jaw, face, and neck.' image='' title='Oral & Maxillofacial surgery' />
                         <ServicesBox desc='It specialized in providing oral care for infants, children and adolescents.' image='' title='Child Dentistry' />
                         <ServicesBox desc='It aims to diagnose gum diseases, preserving the health of the gums.' image='' title='Gums Treatment' />
                     </div>
-                    <div className={styles.avatar}>
+                    {/* <div className={styles.avatar}>
                         <Image width={1200} height={1200} alt='ServidesImageBox' src='/images/3.png' />
-                    </div>
+                    </div> */}
                     <div className={styles.servicesBox}>
                         <ServicesBox desc='It enhance the appearance of teeth and smiles through various treatments.' image='' title='Cosmetic Dentistry' />
                         <ServicesBox desc='Crown & Bridges repairs the damaged teeth, restoring aesthetics to the smile.' image='' title='Prosthetic Dentisry' />
